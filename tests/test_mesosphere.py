@@ -7,7 +7,6 @@ import pytest
 
 
 from mesosphere import mesosphere
-from mesosphere import cli
 
 
 @pytest.fixture
