@@ -11,6 +11,8 @@ class Validator(object):
 
 class RequiredValidator(Validator):
 
+    name = 'required'
+
     context = {
         'code': 'required'
     }
@@ -20,6 +22,8 @@ class RequiredValidator(Validator):
 
 
 class DontAllowBlankValidator(Validator):
+
+    name = 'allow_blank'
 
     context = {
         'code': 'blank_is_now_allowed'
@@ -31,6 +35,8 @@ class DontAllowBlankValidator(Validator):
 
 class DontAllowNoneValidator(Validator):
 
+    name = 'allow_none'
+
     context = {
         'code': 'null_is_not_allowed'
     }
@@ -40,6 +46,8 @@ class DontAllowNoneValidator(Validator):
 
 
 class MaxLengthValidator(Validator):
+
+    name = 'max_length'
 
     context = {
         'code': 'max_length'
@@ -53,6 +61,8 @@ class MaxLengthValidator(Validator):
 
 
 class MinLengthValidator(Validator):
+
+    name = 'min_length'
 
     context = {
         'code': 'min_length'

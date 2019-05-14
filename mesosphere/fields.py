@@ -21,6 +21,9 @@ class CharField(Field):
     ):
 
         self.validators = []
+        self.validators_precedence = [
+            'required', 'allow_none', 'allow_blank', 'min_length', 'max_length'
+        ]
 
         if required:
             self.validators.push(validators.RequiredValidator())
@@ -44,3 +47,5 @@ class CharField(Field):
                     min_length=min_length
                 )
             )
+
+    def validate('')
